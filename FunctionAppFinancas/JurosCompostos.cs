@@ -35,7 +35,7 @@ namespace FunctionAppFinancas
                     valorEmprestimo, numMeses, percTaxa);
             logger.LogInformation($"Valor Final com Juros: {valorFinalJuros}");
 
-            var response = req.CreateResponse(HttpStatusCode.BadRequest);
+            var response = req.CreateResponse();
             response.WriteAsJsonAsync(new Emprestimo()
             {
                 valorEmprestimo = valorEmprestimo.Value,
